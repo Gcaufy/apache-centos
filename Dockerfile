@@ -11,7 +11,7 @@ RUN mkdir -p /data && rm -fr /var/www/html && ln -s /data /var/www/html && mkdir
 RUN echo '<?php echo "Hello World!<br /> This is www.test.com" ?>' > /data/www.test.com/index.php
 RUN echo '<?php echo "Hello World!<br /> This is www.test2.com" ?>' > /data/www.test2.com/index.php
 
-ADD run.sh /run.sh
+ADD scripts/run.sh /run.sh
 RUN chmod 755 /*.sh
 
 EXPOSE 80
